@@ -35,7 +35,7 @@
 }
 
 .header__title {
-  width: 730px;
+  max-width: 730px; /*исправлено с фиксированного значения*/
   line-height: 96px;
   font-size: 102px;
   font-weight: 600;
@@ -44,14 +44,14 @@
 }
 
 .header__subtitle {
-  width: 388px;
-  line-height: 25px;
+  max-width: 388px; /*исправлено с фиксированного значения*/
   font-size: 18px;
   font-weight: 400;
   position: absolute;
   bottom: 30px;
   left: 64px;
   z-index: 3;
+  margin: 0; /*убрал отступы по умолчанию*/
 }
 
 .header__main-illustration {
@@ -61,6 +61,7 @@
   bottom: 0;
   right: 0;
   z-index: 2;
+  object-fit: cover; /*попытался убрать искажение картинки*/
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -98,6 +99,7 @@
   font-size: 18px;
   color: #2f80ed;
   font-weight: 400;
+  margin: 0; /*убрал отступы по умолчанию*/
 }
 
 .two-columns__main-text {
@@ -151,6 +153,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0;
+  padding: 60px 0 0;
+  row-gap: 60px;
 }
 
 .table__cell {
@@ -179,7 +184,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
-  height: 890px;
+  min-height: 890px; /*исправлено с фиксированного значения*/
   background-color: #f2f2f2;
   background-image: url(../images/feynman.png);
   background-repeat: no-repeat;
@@ -189,7 +194,7 @@
 }
 
 .feynman__title {
-  width: 648px;
+  max-width: 648px; /*исправлено с фиксированного значения*/
   margin-top: 100px;
   margin-bottom: 70px;
   text-align: center;
@@ -223,6 +228,8 @@
   align-items: center;
   background-color: #1f1f1f;
   padding: 90px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .kaufman__title {
@@ -236,9 +243,10 @@
 
 .kaufman__title_theme_dark {
   color: white;
+  z-index: 1;
 }
 
-.kaufman__sub-title {
+.kaufman__subtitle {
   width: 60%;
   text-align: center;
   line-height: 34px;
@@ -247,8 +255,25 @@
   margin: 0;
 }
 
-.kaufman__sub-title_theme_dark {
+.kaufman__subtitle_theme_dark {
   color: white;
+  z-index: 1;
+}
+
+.kaufman__triangle {
+  width: 877px;
+  height: 877px;
+  position: absolute;
+  top: 0;
+  right: -210px;
+  background-image: url(../images/kaufman-triangle.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.table_theme_dark {
+  z-index: 1;
+  padding: 80px 0 0;
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -265,6 +290,7 @@
   background-color: #1f1f1f;
   color: white;
   padding: 60px 0 40px;
+  box-sizing: border-box;
 }
 
 .footer__columns {
@@ -291,7 +317,7 @@
 }
 
 .footer__social-icon {
-  size: 16px;
+  width: 16px; /* исправлено имя свойства */
   margin-right: 10px;
 }
 
@@ -299,12 +325,15 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: 600;
+  margin: 0 0 20px;
 }
 
 .footer__column-links {
   display: flex;
   flex-direction: column;
-  margin: 20px 0 16px;
+  padding: 0;
+  margin: 0 0 16px;
+  list-style-type: none;
 }
 
 .footer__column-link {

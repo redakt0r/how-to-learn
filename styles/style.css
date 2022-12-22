@@ -71,6 +71,12 @@
 .header__link {
   color: #2f80ed;
   text-decoration: none;
+  opacity: 1;
+}
+
+.header__link:hover {
+  transition: opacity 0.8s ease;
+  opacity: 0.4;
 }
 
 .techniques {
@@ -281,6 +287,12 @@
   position: absolute;
   right: 48px;
   top: 50%;
+  opacity: 1;
+}
+
+.feynman__link:hover {
+  transition: opacity 0.8s ease;
+  opacity: 0.4;
 }
 
 .kaufman {
@@ -389,6 +401,12 @@
   line-height: 42px;
   font-size: 30px;
   font-weight: 400;
+  opacity: 1;
+}
+
+.khan__buy-link:hover {
+  transition: opacity 0.8s ease;
+  opacity: 0.4;
 }
 
 .table_theme_dark {
@@ -417,6 +435,12 @@
 }
 .resources__link {
   display: block;
+  opacity: 1;
+}
+
+.resources__link:hover {
+  transition: opacity 0.8s ease;
+  opacity: 0.4;
 }
 
 .resources__logo {
@@ -484,4 +508,10 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: 400;
+  opacity: 1;
+}
+
+.footer__column-link:hover {
+  transition: opacity 0.8s ease;
+  opacity: 0.4;
 }

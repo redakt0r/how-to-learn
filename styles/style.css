@@ -1,11 +1,7 @@
 .page {
   min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -13,12 +9,10 @@
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
-  /* выше установили ограничения для секции */
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #f2f2f2;
-  margin-bottom: 100px;
   position: relative;
 }
 
@@ -35,7 +29,7 @@
 }
 
 .header__title {
-  max-width: 730px; /*исправлено с фиксированного значения*/
+  max-width: 730px;
   line-height: 96px;
   font-size: 102px;
   font-weight: 600;
@@ -44,14 +38,14 @@
 }
 
 .header__subtitle {
-  max-width: 388px; /*исправлено с фиксированного значения*/
+  max-width: 388px;
   font-size: 18px;
   font-weight: 400;
   position: absolute;
   bottom: 30px;
   left: 64px;
   z-index: 3;
-  margin: 0; /*убрал отступы по умолчанию*/
+  margin: 0;
 }
 
 .header__main-illustration {
@@ -61,10 +55,9 @@
   bottom: 0;
   right: 0;
   z-index: 2;
-  object-fit: cover; /*попытался убрать искажение картинки*/
+  object-fit: cover;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   height: 568px;
   width: 568px;
@@ -83,7 +76,7 @@
 .description {
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
+  padding: 100px 0;
 }
 
 .two-columns {
@@ -99,7 +92,7 @@
   font-size: 18px;
   color: #2f80ed;
   font-weight: 400;
-  margin: 0; /*убрал отступы по умолчанию*/
+  margin: 0;
 }
 
 .two-columns__main-text {
@@ -125,23 +118,22 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 
-.digits-title {
+.section-title {
   width: 60%;
-  display: flex;
-  justify-content: center;
+  text-align: center;
   line-height: 1.15;
   font-size: 60px;
   font-weight: 600;
-  margin: 0 0 20px;
+  margin: 0;
+  padding-bottom: 20px;
 }
 
-.digits-subtitle {
+.section-subtitle {
   width: 60%;
-  display: flex;
-  justify-content: center;
+  text-align: center;
   line-height: 34px;
   font-size: 24px;
   font-weight: 400;
@@ -184,7 +176,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
-  min-height: 890px; /*исправлено с фиксированного значения*/
+  min-height: 890px;
   background-color: #f2f2f2;
   background-image: url(../images/feynman.png);
   background-repeat: no-repeat;
@@ -194,9 +186,8 @@
 }
 
 .feynman__title {
-  max-width: 648px; /*исправлено с фиксированного значения*/
-  margin-top: 100px;
-  margin-bottom: 70px;
+  max-width: 648px;
+  margin: 100px 0 70px;
   text-align: center;
   line-height: 1.15;
   font-size: 120px;
@@ -232,30 +223,12 @@
   overflow: hidden;
 }
 
-.kaufman__title {
-  width: 60%;
-  text-align: center;
-  line-height: 1.15;
-  font-size: 60px;
-  font-weight: 600;
-  margin: 0 0 20px;
-}
-
-.kaufman__title_theme_dark {
+.section-title_theme_dark {
   color: white;
   z-index: 1;
 }
 
-.kaufman__subtitle {
-  width: 60%;
-  text-align: center;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: 400;
-  margin: 0;
-}
-
-.kaufman__subtitle_theme_dark {
+.section-subtitle_theme_dark {
   color: white;
   z-index: 1;
 }
@@ -276,11 +249,9 @@
   padding: 80px 0 0;
 }
 
-/* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
   color: white;
-  margin-right: 0;
 }
 
 .footer {
@@ -313,11 +284,12 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: 400;
-  margin: 18px 0;
+  margin: 0;
+  padding: 18px 0;
 }
 
 .footer__social-icon {
-  width: 16px; /* исправлено имя свойства */
+  width: 16px;
   margin-right: 10px;
 }
 

@@ -79,6 +79,55 @@
   padding: 100px 0;
 }
 
+.techniques {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  width: 920px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 60px 0 0;
+  margin: 0;
+  row-gap: 60px;
+  column-gap: 100px;
+}
+
+.cards__item {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 0 40px 43px;
+}
+
+.cards__title {
+  text-align: center;
+  margin: 0 0 16px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.cards__description {
+  text-align: center;
+  margin: 0;
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
 .two-columns {
   width: 80%;
   display: flex;
